@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.71.16 SP01?>
+<Library Description="The BRSystem library provides the user with a number of system functions for e.g. handling permanent memory, accessing exception information, etc." xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>brsystem.var</File>
+    <File>brsystem.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="runtime" />
+  </Dependencies>
+</Library>

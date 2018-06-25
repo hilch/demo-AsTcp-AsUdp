@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.3.6.57 SP"?>
+<Project Version="1.00.0" Edition="Standard" EditionComment="Standard" xmlns="http://br-automation.co.at/AS/Project">
+  <Communication>
+    <OnlineConfiguration Name="Serial" DeviceType="Serial" DeviceParameters="/IF=COM2 /BD=57600 /PA=2 /IT=1" ConnectionParameters=" /AM=*" Description="" />
+  </Communication>
+  <ANSIC DefaultIncludes="true" EnableCppComment="true" />
+  <IEC ExtendedConstants="true" IecBitOperations="true" IecExtendedComments="true" KeywordsAsStructureMembers="false" NamingConventions="true" Pointers="true" Preprocessor="false" />
+  <Motion RestartAcoposParameter="true" RestartInitParameter="true" />
+  <Project StoreRuntimeInProject="false" />
+  <Variables DefaultInitValue="0" DefaultRetain="false" DefaultVolatile="false" />
+</Project>

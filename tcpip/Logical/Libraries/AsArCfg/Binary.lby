@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.71.10?>
+<Library xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>AsARCfg.fun</File>
+    <File>AsARCfg.typ</File>
+    <File>AsARCfg.var</File>
+  </Files>
+</Library>

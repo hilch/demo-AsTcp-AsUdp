@@ -1,5 +1,5 @@
 # demo-AsTcp-AsUdp
-B&amp;R Automation Studio demo: how to use AsTcp and AsUdp
+B&amp;R Automation Studio demo: how to use the TcpIp- system- libraries "AsTcp" and "AsUdp"
 
 demonstrates a multi connection Tcp- Server and an Udp - Sender for B&R plc.
 

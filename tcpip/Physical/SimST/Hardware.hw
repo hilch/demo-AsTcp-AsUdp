@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.3.6.57 SP?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="PLC1" Type="PC_any" Version="1.1.0.0" OrderNumber="PC">
+    <Connector Name="IF1">
+      <Parameter ID="ActivateIna" Value="1" />
+    </Connector>
+    <Connector Name="IF2">
+      <Parameter ID="ActivateIna" Value="1" />
+    </Connector>
+    <Parameter ID="ConfigurationID" Value="tcpip_Simulation" />
+    <Parameter ID="XLinkUseDefault" Value="0" />
+    <Parameter ID="ActivateWebServer" Value="0" />
+    <Parameter ID="ActivateSdm" Value="0" />
+  </Module>
+</Hardware>

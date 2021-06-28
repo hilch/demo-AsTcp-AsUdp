@@ -1,0 +1,31 @@
+VAR
+	i : {REDUND_UNREPLICABLE} DINT;
+END_VAR
+VAR CONSTANT
+	ERR_FUB_BUSY : UINT := 65535;
+	ERR_FUB_ENABLE_FALSE : UINT := 65534;
+	PORT : UINT := 8000;
+	MAX_CLIENTS : USINT := 10;
+	MAX_CLIENT_INDEX : USINT := MAX_CLIENTS-1;
+	SERVER_OPEN : UINT := 10;
+	SERVER_RUNNING : UINT := 20;
+	SERVER_ERROR : UINT := 900;
+END_VAR
+VAR
+	close : {REDUND_UNREPLICABLE} TcpClose;
+	open : {REDUND_UNREPLICABLE} TcpOpen;
+	server : {REDUND_UNREPLICABLE} TcpServer;
+	step : {REDUND_UNREPLICABLE} UINT;
+	step_str : {REDUND_UNREPLICABLE} STRING[79] := '';
+	client : {REDUND_UNREPLICABLE} ARRAY[0..MAX_CLIENT_INDEX] OF CLIENT_typ;
+	tempstring : {REDUND_UNREPLICABLE} STRING[79] := '';
+	getipaddr : {REDUND_UNREPLICABLE} CfgGetIPAddr;
+	myip : {REDUND_UNREPLICABLE} STRING[15];
+	errstring : {REDUND_UNREPLICABLE} STRING[127];
+	error : {REDUND_UNREPLICABLE} UINT;
+END_VAR
+VAR CONSTANT
+	welcome_message : STRING[128] := 'Welcome TO B&R Automation Runtime$nPress$n$'1$' for first message$n$'2$' for second message$n$'3$' TO abort connection$n';
+	first_message : STRING[128] := 'Hi Mickey Mouse$n';
+	second_message : STRING[128] := 'Hi Donald Duck$n';
+END_VAR

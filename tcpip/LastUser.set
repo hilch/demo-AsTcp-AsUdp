@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version="4.3.6.57 SP"?>
+<?AutomationStudio Version="4.1.17.113 SP"?>
 <ProjectSettings xmlns="http://br-automation.co.at/AS/ProjectSettings">
-  <ConfigurationManager ActiveConfigurationName="Simulation" />
+  <ConfigurationManager ActiveConfigurationName="SimST" />
   <Deployment Value="ActiveCpu" />
   <Print Footer="%cSeite: %p" Header="%lProjekt: %n%c%x" />
 </ProjectSettings>

@@ -1,0 +1,23 @@
+(********************************************************************
+ * COPYRIGHT -- br
+ ********************************************************************
+ * Program: udp
+ * File: udp.var
+ * Author: hilchenbachc
+ * Created: August 27, 2008
+ ********************************************************************
+ * Local variables of program udp
+ ********************************************************************)
+VAR CONSTANT
+	PORT : UINT := 5000;
+	ERR_FUB_BUSY : UINT := 65535;
+END_VAR
+VAR
+	sender_ip_addr : STRING[20];
+	send_buffer : ARRAY[0..255] OF USINT;
+	close : UdpClose;
+	open : UdpOpen;
+	send : UdpSend;
+	receive_buffer : ARRAY[0..255] OF USINT;
+	recv : UdpRecv;
+END_VAR

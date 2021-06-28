@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=3.0.71.16 SP01?>
+<?AutomationStudio Version=4.1.17.113 SP?>
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Library" Language="Binary" Description="IEC 61131-3 type conversion declarations">Convert</Object>
@@ -8,7 +8,7 @@
     <Object Type="Library" Language="Binary" Description="This library contains FBKs for exchanging data (data stream) via stream sockets (TCP).">AsTcp</Object>
     <Object Type="Library" Language="Binary" Description="Read and write of Automation Runtime configurations.">AsArCfg</Object>
     <Object Type="Library" Language="Binary" Description="This library contains FBKs for exchanging data packets via datagram sockets (UDP).">AsUdp</Object>
-    <Object Type="Library" Language="Binary" Description="The AsString Library contains FBKs for memory and character string handling.">AsString</Object>
     <Object Type="Library" Language="Binary" Description="The BRSystem library provides the user w">brsystem</Object>
+    <Object Type="Library" Language="Binary" Description="The AsBrStr Library contains FBKs for memory and character string handling.">AsBrStr</Object>
   </Objects>
 </Package>

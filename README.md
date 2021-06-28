@@ -1,5 +1,6 @@
 # demo-AsTcp-AsUdp
-B&amp;R Automation Studio demo: how to use the TcpIp- system- libraries "AsTcp" and "AsUdp"
+B&amp;R Automation Studio demo: how to use the TcpIp- system- libraries "AsTcp" and "AsUdp".
+The tasks are each available in ST and in ANSI-C (I use two AS-configurations for that)
 
 # TCP
 

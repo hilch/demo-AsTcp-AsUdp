@@ -5,7 +5,7 @@ The tasks are each available in ST and in ANSI-C (I use two AS-configurations fo
 # TCP
 
 Automation Runtime (ArSim) acts as an TCP server.
-one or more instances of Pyhton script 'tcpclient.py' can be used to contact it.
+one or more instances of Python script 'tcpclient.py' can be used to contact the server.
 
 ![tcpclient](example_tcp_client.png)
 

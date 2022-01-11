@@ -16,7 +16,6 @@ Use Python script 'udpclient.py' to send messages to it.
 
 ![udpclient](example_udp_client.png)
 
-![]
 
 
 ## Release

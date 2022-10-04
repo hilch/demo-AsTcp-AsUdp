@@ -1,3 +1,5 @@
+[![Made For B&R](https://github.com/hilch/BandR-badges/blob/main/Made-For-BrAutomation.svg)](https://www.br-automation.com)
+
 # demo-AsTcp-AsUdp
 B&amp;R Automation Studio demo: how to use the TcpIp- system- libraries "AsTcp" and "AsUdp".
 The tasks are each available in ST and in ANSI-C (I use two AS-configurations for that)

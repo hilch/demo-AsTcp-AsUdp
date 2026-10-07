@@ -1,6 +1,7 @@
 Binaries
 Diagnosis
-/tcpip/hilchenbachc.set
+/tcpip/*.set
 Temp
-
-*.json
+.json
+*.set
+*.isopen

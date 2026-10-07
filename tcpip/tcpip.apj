@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version="4.1.17.113 SP"?>
+<?AutomationStudio Version="4.12.11.2 SP" WorkingVersion="4.12"?>
 <Project Version="1.00.0" Edition="Standard" EditionComment="Standard" xmlns="http://br-automation.co.at/AS/Project">
   <Communication>
     <OnlineConfiguration Name="Serial" DeviceType="Serial" DeviceParameters="/IF=COM2 /BD=57600 /PA=2 /IT=1" ConnectionParameters=" /AM=*" Description="" />

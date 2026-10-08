@@ -1,12 +1,3 @@
-(********************************************************************
- * COPYRIGHT -- Bernecker + Rainer
- ********************************************************************
- * Library: AsBrString
- * File: AsBrString.fun
- * Author: B+R
- ********************************************************************
- * Functions and function blocks of library AsBrString
- ********************************************************************)
                                                                       
 {REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION brsftoa : UINT		(*converts a REAL value into a character string*)
 	VAR_INPUT
@@ -15,6 +6,11 @@
 	END_VAR
 END_FUNCTION
 {REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION brsatof : REAL		(*converts a character string into a REAL (FLOAT) value*)
+	VAR_INPUT
+		pString	:UDINT;		(*pointer to the character string to be converted*)
+	END_VAR
+END_FUNCTION
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION brsatod : LREAL		(*converts a character string into a LREAL (DOUBLE) value*)
 	VAR_INPUT
 		pString	:UDINT;		(*pointer to the character string to be converted*)
 	END_VAR

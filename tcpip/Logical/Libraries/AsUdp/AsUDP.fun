@@ -1,15 +1,5 @@
-(********************************************************************
- * COPYRIGHT -- Bernecker + Rainer
- ********************************************************************
- * Library: AsUdp
- * File: AsUdp.fun
- * Author: feinerr
- * Created: 01.08.2006
- ********************************************************************
- * Functions and function blocks of library AsUdp
- ********************************************************************)
-
-FUNCTION_BLOCK UdpOpen					(*opens a UDP port; asynchronous execution*)
+                                                                      
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK UdpOpen					(*opens a UDP port; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		pIfAddr			: UDINT;		(*pointer to the IP address of the ethernet interface where the UDP socket should be connected*)
@@ -29,7 +19,7 @@ FUNCTION_BLOCK UdpOpen					(*opens a UDP port; asynchronous execution*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK UdpClose					(*closes a UDP port and frees up all required resources; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK UdpClose					(*closes a UDP port and frees up all required resources; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from UdpOpen*)
@@ -46,7 +36,7 @@ FUNCTION_BLOCK UdpClose					(*closes a UDP port and frees up all required resour
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK UdpConnect				(*connects a UDP port to an opposite station; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK UdpConnect				(*connects a UDP port to an opposite station; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from UdpOpen*)
@@ -65,7 +55,7 @@ FUNCTION_BLOCK UdpConnect				(*connects a UDP port to an opposite station; async
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK UdpDisconnect			(*connects a UDP port and the opposite station; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK UdpDisconnect			(*connects a UDP port and the opposite station; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from UdpOpen*)
@@ -82,7 +72,7 @@ FUNCTION_BLOCK UdpDisconnect			(*connects a UDP port and the opposite station; a
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK UdpSend					(*sends udp datagrams; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK UdpSend					(*sends udp datagrams; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from UdpOpen*)
@@ -105,7 +95,7 @@ FUNCTION_BLOCK UdpSend					(*sends udp datagrams; asynchronous execution*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK UdpRecv					(*receives udp datagrams; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK UdpRecv					(*receives udp datagrams; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from UdpOpen*)
@@ -128,7 +118,7 @@ FUNCTION_BLOCK UdpRecv					(*receives udp datagrams; asynchronous execution*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK UdpIoctl					(*changes or retrieves settings; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK UdpIoctl					(*changes or retrieves settings; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from UdpOpen*)

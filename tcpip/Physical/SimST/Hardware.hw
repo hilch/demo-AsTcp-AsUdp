@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.12.11.2 FileVersion="4.9"?>
+<?AutomationStudio WorkingVersion="6.7" FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
-  <Module Name="PLC1" Type="PC_any" Version="1.1.1.0" OrderNumber="PC">
+  <Module Name="PLC1" Type="PC_any" Version="1.1.2.0" OrderNumber="PC">
     <Connector Name="IF1">
       <Parameter ID="ActivateIna" Value="1" />
     </Connector>
@@ -15,5 +15,6 @@
     <Parameter ID="FileDevicePath1" Value="USER_PATH" />
     <Parameter ID="ActivateWebServer" Value="0" />
     <Parameter ID="ActivateSdm" Value="0" />
+    <Parameter ID="ActivateFtpServer" Value="1" />
   </Module>
 </Hardware>

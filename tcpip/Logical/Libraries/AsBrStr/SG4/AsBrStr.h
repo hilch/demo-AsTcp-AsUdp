@@ -19,6 +19,7 @@ extern "C"
 /* Prototyping of functions and function blocks */
 _BUR_PUBLIC unsigned short brsftoa(float value, unsigned long pString);
 _BUR_PUBLIC float brsatof(unsigned long pString);
+_BUR_PUBLIC double brsatod(unsigned long pString);
 _BUR_PUBLIC unsigned short brsitoa(signed long value, unsigned long pString);
 _BUR_PUBLIC signed long brsatoi(unsigned long pString);
 _BUR_PUBLIC unsigned long brsmemset(unsigned long pDest, unsigned char value, unsigned long length);

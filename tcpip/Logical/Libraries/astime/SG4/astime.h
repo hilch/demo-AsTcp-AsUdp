@@ -15,47 +15,6 @@ extern "C"
 #ifndef _BUR_PUBLIC
 #define _BUR_PUBLIC
 #endif
-/* Constants */
-#ifdef _REPLACE_CONST
- #define timERR_AR 33213U
- #define timERR_INVALID_DTSTRUCTURE 33212U
- #define timERR_INVALID_LEN 33211U
- #define timERR_INVALID_PARAMETER 33210U
- #define timREDUND_INTERFACE 3U
- #define timTIME_SERVER 2U
- #define timREAL_TIME_CLOCK 1U
- #define timNO_DST 3U
- #define timDAYLIGHT_SAVING_TIME 2U
- #define timNORMAL_TIME 1U
- #define TIME_MAX 2073600000
- #define TIME_MIN (-2073600000)
- #define DATE_AND_TIME_MAX 4102444799U
- #define timEXSETTIME_NO_OPTION 0U
- #define timEXSETTIME_NO_LOGENTRY 1U
-#else
- #ifndef _GLOBAL_CONST
-   #define _GLOBAL_CONST _WEAK const
- #endif
- _GLOBAL_CONST unsigned short timERR_AR;
- _GLOBAL_CONST unsigned short timERR_INVALID_DTSTRUCTURE;
- _GLOBAL_CONST unsigned short timERR_INVALID_LEN;
- _GLOBAL_CONST unsigned short timERR_INVALID_PARAMETER;
- _GLOBAL_CONST unsigned char timREDUND_INTERFACE;
- _GLOBAL_CONST unsigned char timTIME_SERVER;
- _GLOBAL_CONST unsigned char timREAL_TIME_CLOCK;
- _GLOBAL_CONST unsigned char timNO_DST;
- _GLOBAL_CONST unsigned char timDAYLIGHT_SAVING_TIME;
- _GLOBAL_CONST unsigned char timNORMAL_TIME;
- _GLOBAL_CONST signed long TIME_MAX;
- _GLOBAL_CONST signed long TIME_MIN;
- _GLOBAL_CONST unsigned long DATE_AND_TIME_MAX;
- _GLOBAL_CONST unsigned char timEXSETTIME_NO_OPTION;
- _GLOBAL_CONST unsigned char timEXSETTIME_NO_LOGENTRY;
-#endif
-
-
-
-
 /* Datatypes and datatypes of function blocks */
 typedef struct TIMEStructure
 {	signed char day;
@@ -356,6 +315,44 @@ _BUR_PUBLIC plcdt DTStructure_TO_DT(unsigned long pDTStructure);
 _BUR_PUBLIC unsigned long DT_TO_DTStructure(plcdt DT1, unsigned long pDTStructure);
 _BUR_PUBLIC unsigned long DiffT(plctime TIME2, plctime TIME1);
 _BUR_PUBLIC unsigned long DiffDT(plcdt DT2, plcdt DT1);
+
+
+/* Constants */
+#ifdef _REPLACE_CONST
+ #define timERR_AR 33213U
+ #define timERR_INVALID_DTSTRUCTURE 33212U
+ #define timERR_INVALID_LEN 33211U
+ #define timERR_INVALID_PARAMETER 33210U
+ #define timREDUND_INTERFACE 3U
+ #define timTIME_SERVER 2U
+ #define timREAL_TIME_CLOCK 1U
+ #define timNO_DST 3U
+ #define timDAYLIGHT_SAVING_TIME 2U
+ #define timNORMAL_TIME 1U
+ #define TIME_MAX 2073600000
+ #define TIME_MIN (-2073600000)
+ #define DATE_AND_TIME_MAX 4102444799U
+ #define timEXSETTIME_NO_OPTION 0U
+ #define timEXSETTIME_NO_LOGENTRY 1U
+#else
+ _GLOBAL_CONST unsigned short timERR_AR;
+ _GLOBAL_CONST unsigned short timERR_INVALID_DTSTRUCTURE;
+ _GLOBAL_CONST unsigned short timERR_INVALID_LEN;
+ _GLOBAL_CONST unsigned short timERR_INVALID_PARAMETER;
+ _GLOBAL_CONST unsigned char timREDUND_INTERFACE;
+ _GLOBAL_CONST unsigned char timTIME_SERVER;
+ _GLOBAL_CONST unsigned char timREAL_TIME_CLOCK;
+ _GLOBAL_CONST unsigned char timNO_DST;
+ _GLOBAL_CONST unsigned char timDAYLIGHT_SAVING_TIME;
+ _GLOBAL_CONST unsigned char timNORMAL_TIME;
+ _GLOBAL_CONST signed long TIME_MAX;
+ _GLOBAL_CONST signed long TIME_MIN;
+ _GLOBAL_CONST unsigned long DATE_AND_TIME_MAX;
+ _GLOBAL_CONST unsigned char timEXSETTIME_NO_OPTION;
+ _GLOBAL_CONST unsigned char timEXSETTIME_NO_LOGENTRY;
+#endif
+
+
 
 
 #ifdef __cplusplus

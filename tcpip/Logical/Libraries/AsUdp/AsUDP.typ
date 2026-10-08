@@ -1,14 +1,4 @@
-(********************************************************************
- * COPYRIGHT -- Bernecker + Rainer
- ********************************************************************
- * Library: AsUdp
- * File: AsUdp.typ
- * Author: feinerr
- * Created: 01.08.2006
- ********************************************************************
- * Data types of library AsUdp
- ********************************************************************)
-
+                                                                      
 TYPE
     udpIP_MREQ_typ		: STRUCT	(*multicast*)
 		pMcastAddr		: UDINT;	(*pointer to the multicast address*)

@@ -1,14 +1,4 @@
-(********************************************************************
- * COPYRIGHT -- Bernecker + Rainer
- ********************************************************************
- * Library: AsUdp
- * File: AsUdp.var
- * Author: feinerr
- * Created: 01.08.2006
- ********************************************************************
- * Local variables of library AsUdp
- ********************************************************************)
-
+                                                                      
 VAR CONSTANT
 	udpERR_INVALID_IDENT				: UINT := 32500;	(*invalid ident*)
 	udpERR_NOMORE_IDENTS				: UINT := 32501;	(*no more idents*)
@@ -22,6 +12,7 @@ VAR CONSTANT
 	udpERR_ACCESS						: UINT := 32509;	(*send broadcast failed (broadcast option not set)*)
 	udpERR_UNREACHABLE					: UINT := 32510;	(*network/host is unreachable*)
 	udpERR_INTERFACE					: UINT := 32511;	(*illegal inetrafce*)
+	udpERR_FIREWALL						: UINT := 32512;	(*blocked by firewall*)
 	
 	udpERR_SOCKET_CREATE				: UINT := 32550;	(*create socket failed*)
 	udpERR_SOCKET_BIND					: UINT := 32551;	(*bind socket failed*)
@@ -36,6 +27,7 @@ VAR CONSTANT
 	udpSO_RCVBUF_SET					: UDINT := 1005;	(*set option receive buffer*)
 	udpSO_RCVBUF_GET					: UDINT := 1006;	(*get option receive buffer*)
 	udpSO_ADDRESS_GET					: UDINT := 1007;	(*get socket address*)
+	udpSO_BINDTODEVICE					: UDINT := 1008;	(*bind socket to device*)
 	udpIP_ADD_MEMBERSHIP				: UDINT := 2001;	(*add multicast group*)
 	udpIP_DROP_MEMBERSHIP				: UDINT := 2002;	(*leave multicast group*)
 	udpIP_MULTICAST_IF_SET				: UDINT := 2003;	(*set interface for outgoing multicats*)

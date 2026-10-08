@@ -1,15 +1,5 @@
-(********************************************************************
- * COPYRIGHT -- Bernecker + Rainer
- ********************************************************************
- * Library: AsTcp
- * File: AsTcp.fun
- * Author: feinerr
- * Created: 09.08.2006
- ********************************************************************
- * Functions and function blocks of library AsTcp
- ********************************************************************)
-
-FUNCTION_BLOCK TcpOpen					(*opens a TCP socket; asynchronous execution*)
+                                                                      
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpOpen					(*opens a TCP socket; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		pIfAddr			: UDINT;		(*pointer to the interface address*)
@@ -23,13 +13,55 @@ FUNCTION_BLOCK TcpOpen					(*opens a TCP socket; asynchronous execution*)
 	END_VAR
 
 	VAR
-        i_state			: UINT;			(*internal variable*)
+		i_state			: UINT;			(*internal variable*)
 		i_result		: UINT;			(*internal variable*)
-        i_tmp			: UDINT;		(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK TcpServer				(*starts a TCP server; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpOpenSsl					(*opens a TCP socket using SSL; asynchronous execution*)
+	VAR_INPUT
+		enable			: BOOL;			(*enables execution*)
+		pIfAddr			: UDINT;		(*pointer to the interface address*)
+		port			: UINT;			(*port number of the socket*)
+		sslCfgIdent  	: UDINT;		(*identifier of the SSL configuration*)
+		options			: UDINT;		(*options that can be set during opening*)
+	END_VAR
+
+	VAR_OUTPUT
+		status			: UINT;			(*execution status: ERR_OK, ERR_FUB_ENABLE_FALSE, ERR_FUB_BUSY, 0xXXXX = see help*)
+		ident			: UDINT;		(*identifier for use with TcpServer, TcpClient, TcpSend, TcpRecv, TcpClose and TcpIoctl*)
+	END_VAR
+
+	VAR
+		i_state			: UINT;			(*internal variable*)
+		i_result		: UINT;			(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
+	END_VAR
+END_FUNCTION_BLOCK
+
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpOpenMcs					(*opens a TCP socket using MCS; asynchronous execution*)
+	VAR_INPUT
+		enable				: BOOL;			(*enables execution*)
+		pIfAddr				: UDINT;		(*pointer to the interface address*)
+		port				: UINT;			(*port number of the socket*)
+        mcsStore            : AsTcpMcsType;    (*Managed Certificate Store Struct*)
+		options				: UDINT;		(*options that can be set during opening*)
+	END_VAR
+
+	VAR_OUTPUT
+		status			: UINT;			(*execution status: ERR_OK, ERR_FUB_ENABLE_FALSE, ERR_FUB_BUSY, 0xXXXX = see help*)
+		ident			: UDINT;		(*identifier for use with TcpServer, TcpClient, TcpSend, TcpRecv, TcpClose and TcpIoctl*)
+	END_VAR
+
+	VAR
+		i_state			: UINT;			(*internal variable*)
+		i_result		: UINT;			(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
+	END_VAR
+END_FUNCTION_BLOCK
+
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpServer				(*starts a TCP server; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from TcpOpen()*)
@@ -44,13 +76,13 @@ FUNCTION_BLOCK TcpServer				(*starts a TCP server; asynchronous execution*)
 	END_VAR
 
 	VAR
-        i_state			: UINT;			(*internal variable*)
+		i_state			: UINT;			(*internal variable*)
 		i_result		: UINT;			(*internal variable*)
-        i_tmp			: UDINT;		(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK TcpClient				(*establishs a connection to a TCP server; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpClient				(*establishs a connection to a TCP server; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from TcpOpen()*)
@@ -63,13 +95,13 @@ FUNCTION_BLOCK TcpClient				(*establishs a connection to a TCP server; asynchron
 	END_VAR
 
 	VAR
-        i_state			: UINT;			(*internal variable*)
+		i_state			: UINT;			(*internal variable*)
 		i_result		: UINT;			(*internal variable*)
-        i_tmp			: UDINT;		(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK TcpClose					(*closes a UDP port and frees up all required resources; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpClose					(*closes a TCP socket and frees up all required resources; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from TcpOpen()*)
@@ -81,13 +113,13 @@ FUNCTION_BLOCK TcpClose					(*closes a UDP port and frees up all required resour
 	END_VAR
 
 	VAR
-        i_state			: UINT;			(*internal variable*)
+		i_state			: UINT;			(*internal variable*)
 		i_result		: UINT;			(*internal variable*)
-        i_tmp			: UDINT;		(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK TcpSend					(*sends data (byte stream); asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpSend					(*sends data (byte stream); asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from TcpOpen()*)
@@ -102,13 +134,13 @@ FUNCTION_BLOCK TcpSend					(*sends data (byte stream); asynchronous execution*)
 	END_VAR
 
 	VAR
-        i_state			: UINT;			(*internal variable*)
+		i_state			: UINT;			(*internal variable*)
 		i_result		: UINT;			(*internal variable*)
-        i_tmp			: UDINT;		(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK TcpRecv					(*receives TCP byte stream; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpRecv					(*receives TCP byte stream; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from TcpOpen()*)
@@ -123,13 +155,13 @@ FUNCTION_BLOCK TcpRecv					(*receives TCP byte stream; asynchronous execution*)
 	END_VAR
 
 	VAR
-        i_state			: UINT;			(*internal variable*)
+		i_state			: UINT;			(*internal variable*)
 		i_result		: UINT;			(*internal variable*)
-        i_tmp			: UDINT;		(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK TcpIoctl					(*changes or retrieves settings; asynchronous execution*)
+{REDUND_CONTEXT} {REDUND_UNREPLICABLE} FUNCTION_BLOCK TcpIoctl					(*changes or retrieves settings; asynchronous execution*)
 	VAR_INPUT
 		enable			: BOOL;			(*enables execution*)
 		ident			: UDINT;		(*identifier returned from TcpOpen()*)
@@ -144,8 +176,8 @@ FUNCTION_BLOCK TcpIoctl					(*changes or retrieves settings; asynchronous execut
 	END_VAR
 
 	VAR
-        i_state			: UINT;			(*internal variable*)
+		i_state			: UINT;			(*internal variable*)
 		i_result		: UINT;			(*internal variable*)
-        i_tmp			: UDINT;		(*internal variable*)
+		i_tmp			: UDINT;		(*internal variable*)
 	END_VAR
 END_FUNCTION_BLOCK

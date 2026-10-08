@@ -1,230 +1,224 @@
-(********************************************************************
- * COPYRIGHT (C) BERNECKER + RAINER, AUSTRIA, A-5142 EGGELSBERG
- ********************************************************************
- * Library: Operator
- * File: Operator.fun
- * Created: 11.11.2003
- ********************************************************************
- * Functions and function blocks of library Operator
- ********************************************************************)
-FUNCTION SIZEOF : UDINT (* Return size of a variable in memory *)
+                                                                      
+{REDUND_OK} FUNCTION SIZEOF : UDINT 		(*determines the size of a variable in bytes*)
 	VAR_INPUT
-		in	:ANY;
+		in	:ANY;				(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION ADR : UDINT (* Return address of a variable in memory *)
+{REDUND_OK} FUNCTION ADR : UDINT 			(*determines the address of a data point*)
 	VAR_INPUT
-		in	:ANY;
+		in	:ANY;				(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION SHR : ANY (* IEC1131-3: OUT := IN right-shifted by N bits, zero-filled left *)
+{REDUND_OK} FUNCTION ADRINST : UDINT 		(*determines the address of a fub instance*)
+END_FUNCTION
+{REDUND_OK} FUNCTION SHR : ANY 				(*shifts bitwise to the right*)
 	VAR_INPUT
-		IN	:ANY;
-		N	:SINT;
+		IN	:ANY;				(*input value*)
+		N	:SINT;				(*number of bits to be shifted*)
 	END_VAR
 END_FUNCTION
-FUNCTION ROR : ANY (* IEC1131-3: OUT := IN right-rotated by N bits, circular *)
+{REDUND_OK} FUNCTION ROR : ANY 				(*rotates bitwise to the right*)
 	VAR_INPUT
-		IN	:ANY;
-		N	:SINT;
+		IN	:ANY;				(*input value*)
+		N	:SINT;				(*number of bits to be rotated*)
 	END_VAR
 END_FUNCTION
-FUNCTION ROL : ANY (* IEC1131-3: OUT := IN left-rotated by N bits, circular *)
+{REDUND_OK} FUNCTION ROL : ANY 				(*rotates bitwise to the left*)
 	VAR_INPUT
-		IN	:ANY;
-		N	:SINT;
+		IN	:ANY;				(*input value*)
+		N	:SINT;				(*number of bits to be rotated*)
 	END_VAR
 END_FUNCTION
-FUNCTION SHL : ANY (* IEC1131-3: OUT := IN left-shifted by N bits, zero-filled right *)
+{REDUND_OK} FUNCTION SHL : ANY 				(*shifts bitwise to the left*)
 	VAR_INPUT
-		IN	:ANY;
-		N	:SINT;
+		IN	:ANY;				(*input value*)
+		N	:SINT;				(*number of bits to be shifted*)
 	END_VAR
 END_FUNCTION
-FUNCTION AND : ANY (* IEC1131-3: OUT := IN1 & IN2 & ... & INn *)
+{REDUND_OK} FUNCTION AND : ANY 				(*makes a bitwise AND relation for 2 or more variables*)
 	VAR_INPUT
-		INx	:ANY;
+		INx	:ANY;				(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION XOR : ANY (* IEC1131-3: OUT := IN1 XOR IN2 XOR ... XOR INn *)
+{REDUND_OK} FUNCTION XOR : ANY 				(*makes a bitwise XOR relation for 2 or more variables*)
 	VAR_INPUT
-		INx	:ANY;
+		INx	:ANY;				(*input values*)
 	END_VAR
 END_FUNCTION
-FUNCTION OR : ANY (* IEC1131-3: OUT := IN1 OR IN2 OR ... OR INn *)
+{REDUND_OK} FUNCTION OR : ANY 				(*makes a bitwise OR relation for 2 or more variables*)
 	VAR_INPUT
-		INx	:ANY;
+		INx	:ANY;				(*input values*)
 	END_VAR
 END_FUNCTION
-FUNCTION NOT : ANY (* IEC1131-3: OUT := NOT IN *)
+{REDUND_OK} FUNCTION NOT : ANY 				(*makes a bitwise inversion of variables*)
 	VAR_INPUT
-		IN	:ANY;
+		IN	:ANY;				(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION ADD : ANY (* IEC1131-3: OUT := IN1 + IN2 + ... + INn *)
+{REDUND_OK} FUNCTION ADD : ANY 				(*adds 2 or more variables*)
 	VAR_INPUT
-		INx	:ANY;
+		INx	:ANY;				(*input values*)
 	END_VAR
 END_FUNCTION
-FUNCTION MUL : ANY_NUM (* IEC1131-3: OUT := IN1 * IN2 * ... * INn *)
+{REDUND_OK} FUNCTION MUL : ANY_NUM 			(*multiplies 2 or more variables*)
 	VAR_INPUT
-		INx	:ANY_NUM;
+		INx	:ANY_NUM;			(*input values*)
 	END_VAR
 END_FUNCTION
-FUNCTION SUB : ANY (* IEC1131-3: OUT := IN1 - IN2 *)
+{REDUND_OK} FUNCTION SUB : ANY 				(*subtracts one or more variables from another variable*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN1	:ANY;				(*value 1*)
+		IN2	:ANY;				(*value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION DIV : ANY_NUM (* IEC1131-3: OUT := IN1 / IN2 *)
+{REDUND_OK} FUNCTION DIV : ANY_NUM 			(*divides a variable by one or more variables*)
 	VAR_INPUT
-		IN1	:ANY_NUM;
-		IN2	:ANY_NUM;
+		IN1	:ANY_NUM;			(*dividend*)
+		IN2	:ANY_NUM;			(*divisor*)
 	END_VAR
 END_FUNCTION
-FUNCTION MOD : ANY_INT (* IEC1131-3: OUT := IN1 modulo IN2 *)
+{REDUND_OK} FUNCTION MOD : ANY_INT 			(*makes a remainder when dividing a variable by another variable*)
 	VAR_INPUT
-		IN1	:ANY_INT;
-		IN2	:ANY_INT;
+		IN1	:ANY_INT;			(*dividend*)
+		IN2	:ANY_INT;			(*divisor*)
 	END_VAR
 END_FUNCTION
-FUNCTION MOVE : ANY (* IEC1131-3: OUT := IN *)
+{REDUND_OK} FUNCTION MOVE : ANY 			(*copies the contents of the input variables to the corresponding output variables*)
 	VAR_INPUT
-		IN	:ANY;
+		IN	:ANY;				(*input variable*)
 	END_VAR
 END_FUNCTION
-FUNCTION MAX : ANY (* IEC1131-3: OUT := MAX(IN1, IN2) *)
+{REDUND_OK} FUNCTION MAX : ANY 				(*determines the maximum value of two or more values*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN1	:ANY;				(*input value 1*)
+		IN2	:ANY;				(*input value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION MIN : ANY (* IEC1131-3: OUT := MIN(IN1, IN2) *)
+{REDUND_OK} FUNCTION MIN : ANY 				(*determines the lowest value of two or more values*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN1	:ANY;				(*input value 1*)
+		IN2	:ANY;				(*input value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION LIMIT : ANY (* IEC1131-3: OUT := MIN(MAX(IN,MN),MX) *)
+{REDUND_OK} FUNCTION LIMIT : ANY 			(*limits a value to within maximum and minimum boundaries*)
 	VAR_INPUT
-		MN	:ANY;
-		IN	:ANY;
-		MX	:ANY;
+		MN	:ANY;				(*minimum value*)
+		IN	:ANY;				(*input value*)
+		MX	:ANY;				(*maximum value*)
+	END_VAR		
+END_FUNCTION
+{REDUND_OK} FUNCTION SEL : ANY 				(*selects one value from two values*)
+	VAR_INPUT
+		G	:BOOL;				(*selection variable*)
+		IN0	:ANY;				(*input value for FALSE*)
+		IN1	:ANY;				(*input value for TRUE*)
 	END_VAR
 END_FUNCTION
-FUNCTION SEL : ANY (* IEC1131-3: OUT := IN0 if G = 0; OUT := IN1 if G = 1 *)
+{REDUND_OK} FUNCTION MUX : ANY 				(*selects a value from several values*)
 	VAR_INPUT
-		G	:BOOL;
-		IN0	:ANY;
-		IN1	:ANY;
+		K	:SINT;				(*selection variable*)
+		INx	:ANY;				(*input values*)
 	END_VAR
 END_FUNCTION
-FUNCTION MUX : ANY (* IEC1131-3: Select one of "N" inputs  depending on input K *)
+{REDUND_OK} FUNCTION GE : BOOL 				(*checks if the input values are in decreasing order*)
 	VAR_INPUT
-		K	:SINT;
-		INx	:ANY;
+		IN1	:ANY;				(*comparison value 1*)
+		IN2	:ANY;				(*comparison value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION GE : BOOL (* IEC1131-3: OUT := (IN1>=IN2)  *)
+{REDUND_OK} FUNCTION EQ : BOOL 				(*compares two or more values whether they are equal*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN1	:ANY;				(*comparison value 1*)
+		IN2	:ANY;				(*comparison value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION EQ : BOOL (* IEC1131-3: OUT := (IN1=IN2)  *)
+{REDUND_OK} FUNCTION GT : BOOL 				(*checks if the input values are in decreasing order*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN1	:ANY;				(*comparison value 1*)
+		IN2	:ANY;				(*comparison value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION GT : BOOL (* IEC1131-3: OUT := (IN1>IN2)  *)
+{REDUND_OK} FUNCTION LE : BOOL 				(*checks if the input values are in increasing order*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN1	:ANY;				(*comparison value 1*)
+		IN2	:ANY;				(*comparison value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION LE : BOOL (* IEC1131-3: OUT := (IN1<=IN2)  *)
+{REDUND_OK} FUNCTION LT : BOOL 				(*checks if the input values are in increasing order*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN1	:ANY;				(*comparison value 1*)
+		IN2	:ANY;				(*comparison value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION LT : BOOL (* IEC1131-3: OUT := (IN1<IN2)  *)
+{REDUND_OK} FUNCTION NE : BOOL 				(*compares two values whether they are not equal*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN1	:ANY;				(*comparison value 1*)
+		IN2	:ANY;				(*comparison value 2*)
 	END_VAR
 END_FUNCTION
-FUNCTION NE : BOOL (* IEC1131-3: OUT := (IN1<>IN2) *)
+{REDUND_OK} FUNCTION ABS : ANY_NUM 			(*returns the absolute value of a number*)
 	VAR_INPUT
-		IN1	:ANY;
-		IN2	:ANY;
+		IN	:ANY_NUM;			(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION ABS : ANY_NUM (* IEC1131-3: Absolute value *)
+{REDUND_OK} FUNCTION SQRT : ANY_REAL 		(*returns the square root of a number*)
 	VAR_INPUT
-		IN	:ANY_NUM;
+		IN	:ANY_REAL;			(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION SQRT : ANY_REAL (* IEC1131-3: Square root *)
+{REDUND_OK} FUNCTION LN : ANY_REAL 			(*returns the result of a natural logarithm*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION LN : ANY_REAL (* IEC1131-3: Natural logarithm *)
+{REDUND_OK} FUNCTION LOG : ANY_REAL 		(*returns the result of a base 10 logarithm*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION LOG : ANY_REAL (* IEC1131-3: Logarithm base 10 *)
+{REDUND_OK} FUNCTION EXP : ANY_REAL 		(*returns the result of a natural exponential function*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION EXP : ANY_REAL (* IEC1131-3: Natural exponential *)
+{REDUND_OK} FUNCTION SIN : ANY_REAL 		(*returns the sine of a number (calculated in radian)*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value in radian*)
 	END_VAR
 END_FUNCTION
-FUNCTION SIN : ANY_REAL (* IEC1131-3: Sine of input in radians *)
+{REDUND_OK} FUNCTION COS : ANY_REAL 		(*returns the cosine of a number (calculated in radian)*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value in radian*)
 	END_VAR
 END_FUNCTION
-FUNCTION COS : ANY_REAL (* IEC1131-3: Cosine in radians *)
+{REDUND_OK} FUNCTION TAN : ANY_REAL 		(*returns the tangent of a number (calculated in radian)*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value in radian*)
 	END_VAR
 END_FUNCTION
-FUNCTION TAN : ANY_REAL (* IEC1131-3: Tangent in radians *)
+{REDUND_OK} FUNCTION ASIN : ANY_REAL 		(*returns the arc sine (inverse function of sine) of a number (calculated in radian)*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION ASIN : ANY_REAL (* IEC1131-3: Principal arc sine *)
+{REDUND_OK} FUNCTION ACOS : ANY_REAL 		(*returns the arc cosine (inverse function of cosine) of a number (calculated in radian)*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION ACOS : ANY_REAL (* IEC1131-3: Principal arc cosine *)
+{REDUND_OK} FUNCTION ATAN : ANY_REAL 		(*returns the arc tangent (inverse function of tangent) of a number (calculated in radian)*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value*)
 	END_VAR
 END_FUNCTION
-FUNCTION ATAN : ANY_REAL (* IEC1131-3: Principal arc tangent *)
+{REDUND_OK} FUNCTION EXPT : REAL 			(*raises one variable to the power of another*)
 	VAR_INPUT
-		IN	:ANY_REAL;
+		IN1	:REAL;				(*base*)
+		IN2	:ANY_NUM;			(*exponent*)
 	END_VAR
 END_FUNCTION
-FUNCTION EXPT : REAL (* IEC1131-3: Exponentiation: OUT := IN1 ^ IN2 *)
+{REDUND_OK} FUNCTION TRUNC : INT 			(*converts from type REAL to type INT (number is always rounded down)*)
 	VAR_INPUT
-		IN1	:REAL;
-		IN2	:ANY_NUM;
-	END_VAR
-END_FUNCTION
-FUNCTION TRUNC : INT (* IEC1131-3: Truncation toward zero *)
-	VAR_INPUT
-		IN	:ANY_REAL;
+		IN	:ANY_REAL;			(*input value*)
 	END_VAR
 END_FUNCTION

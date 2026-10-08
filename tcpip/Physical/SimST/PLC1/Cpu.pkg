@@ -9,7 +9,7 @@
   </Objects>
   <Configuration HasNcOperatingSystem="true" LocalVariablesMemory="MemoryPool">
     <AutomationRuntime Version="U4.93" />
-    <Build AdditionalBuildOptions="-lc" AnsicAdditionalBuildOptions="-D ETHERNET_DEVICE=IF3" GccVersion="4.1.2" GeneratePPCode="false" />
+    <Build AdditionalBuildOptions="-lc" AnsicAdditionalBuildOptions="" GccVersion="6.3.0" GeneratePPCode="false" />
     <DefaultTargetMemory DataObjects="UserROM" Libraries="UserROM" Tasks="UserROM" />
     <Io ArConfigDataModule="false" ArConfigDataModulePath="$(AS_CPU_PATH)\AS\CfgData.br" DisabledHardware="false" IoMapDataModule="false" IoMapDataModulePath="$(AS_CPU_PATH)\AS\IomData.br" ManualIoOffsets="false" Supervision="true" />
     <Opc EncryptOpcs="false" UseShortNames="false" WindowsServer="true" />

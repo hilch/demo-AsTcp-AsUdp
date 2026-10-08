@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.1.17.113 SP?>
+<?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL0" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1" />
   <TaskClass Name="Cyclic#2">
@@ -22,9 +22,7 @@
   <Libraries>
     <LibraryObject Name="AsArCfg" Source="Libraries.AsArCfg.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsTcp" Source="Libraries.AsTcp.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="Runtime" Source="Libraries.Runtime.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="Operator" Source="Libraries.Operator.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="Convert" Source="Libraries.Convert.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsUdp" Source="Libraries.AsUdp.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsBrStr" Source="Libraries.AsBrStr.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>

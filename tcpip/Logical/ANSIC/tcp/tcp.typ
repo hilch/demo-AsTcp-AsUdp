@@ -10,4 +10,10 @@ TYPE
 		send : TcpSend;
 		close : TcpClose;
 	END_STRUCT;
+	TcpSteps_enum : 
+		(
+		SERVER_OPEN,
+		SERVER_RUNNING,
+		SERVER_ERROR
+		);
 END_TYPE

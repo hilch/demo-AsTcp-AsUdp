@@ -1,19 +1,11 @@
+
+/* https://github.com/hilch/demo-AsTcp-AsUdp */
+
 /* ------------------------------------------------------------------------------------------------------------
 example for AsTCP- library
 connect with 'tcpclient.py'. Multiple connections in parallel are possible.
 ---------------------------------------------------------------------------------------------------------------*/
 
-#define _REPLACE_CONST
-
-/*
-	using _REPLACE_CONST enables defining constants in *.var files
-	and automatically creates #defines from them.
-
-	on the other hand, this leads to a warning 6424 being generated which
-	can be suppressed by adding 
-		-W 6424
-	to 'Additional build options' (either to complete project or 'tcp' task only) 
-*/
 
 #ifdef _DEFAULT_INCLUDES
 #include <AsDefault.h>
@@ -23,9 +15,6 @@ connect with 'tcpclient.py'. Multiple connections in parallel are possible.
 
 char*				p_step_str;
 char*				p_step_str_old;
-
-
-
 
 /* --------------------------------------------------------------------------------------------------------
 	startup after powerfail

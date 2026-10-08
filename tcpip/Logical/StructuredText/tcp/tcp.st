@@ -1,3 +1,5 @@
+(* https://github.com/hilch/demo-AsTcp-AsUdp *)
+
 (*
 example FOR AsTCP- library
 connect with 'tcpclient.py'. Multiple connections in parallel are possible.

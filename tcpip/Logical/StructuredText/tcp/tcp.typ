@@ -1,5 +1,11 @@
 
 TYPE
+	TcpSteps_enum : 
+		(
+		SERVER_OPEN,
+		SERVER_RUNNING,
+		SERVER_ERROR
+		);
 	CLIENT_typ : {REDUND_UNREPLICABLE} 	STRUCT 
 		connected : {REDUND_UNREPLICABLE} BOOL;
 		data_received : {REDUND_UNREPLICABLE} BOOL;

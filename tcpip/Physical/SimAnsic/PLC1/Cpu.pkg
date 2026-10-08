@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.1.17.113 SP?>
+<?AutomationStudio FileVersion="4.9"?>
 <Cpu xmlns="http://br-automation.co.at/AS/Cpu">
   <Objects>
     <Object Type="File" Description="Software configuration">Cpu.sw</Object>
@@ -8,11 +8,11 @@
     <Object Type="File" Description="PV mapping file">PvMap.vvm</Object>
   </Objects>
   <Configuration Address="SL0" ClassID="1A4000.00" GeneratePPCode="false" HasNcOperatingSystem="true" LocalVariablesMemory="MemoryPool" ModuleID="AR000" OnlineConfigurationName="AR000_TCPIP" Target="SG4">
-    <AutomationRuntime Version="E3.10" />
-    <Build AdditionalBuildOptions="-lc" AnsicAdditionalBuildOptions="-D ETHERNET_DEVICE=IF3" GccVersion="4.1.2" />
+    <AutomationRuntime Version="U4.93" />
+    <Build AdditionalBuildOptions="-lc" AnsicAdditionalBuildOptions="" GccVersion="6.3.0" />
     <DefaultTargetMemory DataObjects="UserROM" Libraries="UserROM" Tasks="UserROM" />
     <TaskClasses DefaultTaskClass="Cyclic4" />
-    <Transfer DownloadMode="Overload" GeneratePviTransferList="true" IgnoreTargetOnlyObjects="false" PackedArConfig="false" PackedIoMap="false" PromptBeforeProject="false" PromptBeforeTask="false" TransferOnlyRelevantChanges="false" />
+    <Transfer DownloadMode="Overload" GeneratePviTransferList="true" IgnoreTargetOnlyObjects="false" PackedArConfig="false" PackedIoMap="false" PromptBeforeProject="false" PromptBeforeTask="false" SavedOfflineInstallationFolder="" SavedPipDestinationFolder="" SavedRuntimeUtilityCenterPackagePath="" TransferOnlyRelevantChanges="false" />
     <OnlineConfiguration Name="AR000_TCPIP" DeviceType="AR000_TCPIP" DeviceParameters="/IF=Tcpip /SA=1" ConnectionParameters="/DA=2 /DAIP=127.0.0.1 /REPO=11160 /RT=1000 /AM=*" Description="" />
   </Configuration>
 </Cpu>

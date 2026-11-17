@@ -8,14 +8,14 @@ The tasks are each available in ST and in ANSI-C (project uses two AS-configurat
 
 This software published under [MIT license](LICENSE). Also have a look into the [disclaimer](Disclaimer.md).
 
-# TCP Server
+## TCP Server
 
 Automation Runtime (ArSim) acts as an TCP server.
 one or more instances of Python script 'tools/tcpclient.py' can be used to contact the server.
 
 ![tcpclient](example_tcp_client.png)
 
-# UDP Server
+## UDP Server
 
 Automation Runtime (ArSim) listens on a port and echoes all incoming data back to sender.
 Use Python script 'tools/udpclient.py' to send messages to it.
@@ -24,7 +24,7 @@ Use Python script 'tools/udpclient.py' to send messages to it.
 
 
 
-# Automation Studio
+## Automation Studio
 To try this example you need to have Automation Studio installed. 
 
 Since simulation is configured ('ArSim'), you don't need a real PLC.
